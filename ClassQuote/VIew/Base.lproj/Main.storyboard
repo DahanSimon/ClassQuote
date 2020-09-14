@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ClassQuote" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fwO-Mu-4B3">
+                                <rect key="frame" x="10" y="64" width="394" height="350"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gRY-Cf-o2y" userLabel="Quote Label">
+                                <rect key="frame" x="10" y="64" width="394" height="350"/>
+                                <color key="backgroundColor" red="0.85914474730000001" green="0.85926884410000004" blue="0.85911762709999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="350" id="8ly-D8-j1n"/>
+                                </constraints>
+                                <string key="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis convallis at mi sit amet posuere. Aliquam ex nunc, convallis at lorem ac, imperdiet dignissim tellus. Integer consectetur neque in sapien lobortis, ac rutrum leo venenatis. Aliquam quis commodo magna. Quisque sed mi efficitur, condimentum dui sed, maximus neque. Nam arcu sem, ornare a convallis eu, rutrum a turpis.</string>
+                                <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Jean L'auteur" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EHh-fn-A5b" userLabel="Author Label">
+                                <rect key="frame" x="20" y="422" width="374" height="20"/>
+                                <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="m3G-MC-Nca">
+                                <rect key="frame" x="182" y="792" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="BTb-tE-BEk"/>
+                                </constraints>
+                            </activityIndicatorView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G26-yo-sD5">
+                                <rect key="frame" x="20" y="792" width="374" height="50"/>
+                                <color key="backgroundColor" red="0.5316207409" green="0.21255522969999999" blue="0.188218683" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="giQ-yG-UZG"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="17"/>
+                                <state key="normal" title="NEW QUOTE">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="tappedNewQuoteButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="AXT-aw-lhR"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.95675212139999999" green="0.94116199020000002" blue="0.94117748739999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="fwO-Mu-4B3" firstAttribute="leading" secondItem="gRY-Cf-o2y" secondAttribute="leading" id="75L-NS-S5z"/>
+                            <constraint firstItem="fwO-Mu-4B3" firstAttribute="trailing" secondItem="gRY-Cf-o2y" secondAttribute="trailing" id="AY8-dA-XNR"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="EHh-fn-A5b" secondAttribute="trailing" constant="20" id="E8b-89-aVw"/>
+                            <constraint firstItem="EHh-fn-A5b" firstAttribute="top" secondItem="gRY-Cf-o2y" secondAttribute="bottom" constant="8" id="J7Y-Iv-ACF"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="gRY-Cf-o2y" secondAttribute="trailing" constant="10" id="Pjs-Di-DjX"/>
+                            <constraint firstItem="m3G-MC-Nca" firstAttribute="bottom" secondItem="G26-yo-sD5" secondAttribute="bottom" id="Pnb-l1-FUv"/>
+                            <constraint firstItem="fwO-Mu-4B3" firstAttribute="top" secondItem="gRY-Cf-o2y" secondAttribute="top" id="RCR-QV-6AA"/>
+                            <constraint firstItem="m3G-MC-Nca" firstAttribute="top" secondItem="G26-yo-sD5" secondAttribute="top" id="RTf-dl-sXh"/>
+                            <constraint firstItem="gRY-Cf-o2y" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="VjJ-cm-5xU"/>
+                            <constraint firstItem="fwO-Mu-4B3" firstAttribute="bottom" secondItem="gRY-Cf-o2y" secondAttribute="bottom" id="e06-kA-fPt"/>
+                            <constraint firstItem="gRY-Cf-o2y" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="hkp-J5-bhn"/>
+                            <constraint firstItem="m3G-MC-Nca" firstAttribute="centerY" secondItem="G26-yo-sD5" secondAttribute="centerY" id="lh8-1l-TFr"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="G26-yo-sD5" secondAttribute="trailing" constant="20" id="m0L-aX-QVy"/>
+                            <constraint firstItem="G26-yo-sD5" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" constant="-20" id="npI-2J-O7C"/>
+                            <constraint firstItem="EHh-fn-A5b" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="spy-Kr-8IN"/>
+                            <constraint firstItem="G26-yo-sD5" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="vib-pt-Eoy"/>
+                            <constraint firstItem="m3G-MC-Nca" firstAttribute="centerX" secondItem="G26-yo-sD5" secondAttribute="centerX" id="yBr-G9-AIB"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="activityIndicator" destination="m3G-MC-Nca" id="xFr-Oh-4BU"/>
+                        <outlet property="authorLabel" destination="EHh-fn-A5b" id="NdW-2z-nlp"/>
+                        <outlet property="imageView" destination="fwO-Mu-4B3" id="qhC-sI-rxy"/>
+                        <outlet property="newQuoteButton" destination="G26-yo-sD5" id="ZBe-dc-6F0"/>
+                        <outlet property="quoteLabel" destination="gRY-Cf-o2y" id="Hs2-gg-RPf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="132" y="139"/>
+        </scene>
+    </scenes>
+</document>
