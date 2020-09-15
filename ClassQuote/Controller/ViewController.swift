@@ -29,8 +29,26 @@ class ViewController: UIViewController {
     }
     
     @IBAction func tappedNewQuoteButton(_ sender: Any) {
-        QuoteService.getQuote()
+        toggleActivityIndicator(shown: true)
+        
+        QuoteService.shared.getQuote { (success, quote) in
+            self.toggleActivityIndicator(shown: false)
+            
+            if success, let quote = quote {
+                self.quoteLabel.text = quote.text
+                self.authorLabel.text = quote.author
+            } else {
+                let alertVC = UIAlertController(title: "Erreur", message: "Une erreur c'est produite !", preferredStyle: .alert)
+                let action = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+                alertVC.addAction(action)
+                self.present(alertVC, animated: true, completion: nil)
+            }
+        }
     }
     
+    private func toggleActivityIndicator(shown: Bool) {
+        newQuoteButton.isHidden = shown
+        activityIndicator.isHidden = !shown
+    }
 }
 
